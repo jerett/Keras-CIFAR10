@@ -4,8 +4,8 @@ You can ref it as a quick start for these deep learning tools.
 
  ---
 
-## cifar_demo
-a brief of classifier architecture.
+## CIFAR10_demo
+Brief of classifier architecture.
 
 ### keras_svm
 * Dense Layer
