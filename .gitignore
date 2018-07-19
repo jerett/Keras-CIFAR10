@@ -1,0 +1,9 @@
+insta360/__pycache__/insta360.cpython-35.pyc
+*.h5
+*.pyc
+*.json
+.idea/
+.vscode/
+__pycache__/
+.env/
+.ipynb_checkpoints/
