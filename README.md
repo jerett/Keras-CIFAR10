@@ -24,3 +24,7 @@ Brief of classifier architecture.
 * BN Layer
 * ReLU
 * Dense Layer with 10 outputs.
+
+### keras_vgg16
+* vgg16 network
+* 90% acc at present. 
