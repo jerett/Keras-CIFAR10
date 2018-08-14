@@ -1,30 +1,26 @@
-# DeepLearning Demo
-This project demonstrates some examples using keras, tensorflow.
-You can ref it as a quick start for these deep learning tools.
+# Keras for CIFAR10
+This project demonstrates some personal examples with Keras on CIFAR10.
 
  ---
+ 
+ 
+## Introduction
 
-## CIFAR10_demo
-Brief of classifier architecture.
+---
+The CIFAR10 dataset is 32x32 size, 50000 train images and 10000 test images.
+The dataset is divided into 40000 train images, 10000 validation images, and 10000 images.
 
-### keras_svm
-* Dense Layer
-* SVM categorical
+ 
+ 
+## Result
+All result is tested on 10000 test images.You can view and run in the jupyter
+environment.
 
-### keras_softmax
-* Dense Layer
-* Softmax categorical
-
-### keras_simple_cnn
-* 7x7 layer Conv layer with 32 filters
-* BN Layer
-* ReLu Activation Layer
-* 2x2 Max Polling Layer
-* Dense Layer with 1024 output units.
-* BN Layer
-* ReLU
-* Dense Layer with 10 outputs.
-
-### keras_vgg16
-* vgg16 network
-* 90% acc at present. 
+ Model | Accuracy
+ :---: | :---: 
+ SVM | 33.36% | 
+ Softmax | 33.11% |
+ simple_cnn     | 66.75%
+ vgg | 92.32% 
+ inceptionV1 | 93.08% 
+ ResNet18 | 93.47%
