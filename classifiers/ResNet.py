@@ -19,7 +19,7 @@ def conv2d_bn_relu(x, filters, kernel_size, weight_decay=.0, strides=(1, 1)):
                    use_bias=False,
                    kernel_regularizer=l2(weight_decay)
                    )(x)
-    layer = BatchNormalization(scale=False, axis=3)(layer)
+    layer = BatchNormalization()(layer)
     layer = Activation('relu')(layer)
     return layer
 
@@ -74,3 +74,38 @@ def ResNet18(classes, input_shape, weight_decay=1e-4):
     x = Dense(classes, activation='softmax')(x)
     model = Model(input, x, name='ResNet18')
     return model
+
+
+def ResNetForCIFAR10(classes, input_shape, block_layers_num, weight_decay):
+    input = Input(shape=input_shape)
+    x = input
+    x = conv2d_bn_relu(x, filters=16, kernel_size=(3, 3), weight_decay=weight_decay, strides=(1, 1))
+
+    # # conv 2
+    for i in range(block_layers_num):
+        x = ResidualBlock(x, filters=16, kernel_size=(3, 3), weight_decay=weight_decay, downsample=False)
+    # # conv 3
+    x = ResidualBlock(x, filters=32, kernel_size=(3, 3), weight_decay=weight_decay, downsample=True)
+    for i in range(block_layers_num-1):
+        x = ResidualBlock(x, filters=32, kernel_size=(3, 3), weight_decay=weight_decay, downsample=False)
+    # # conv 4
+    x = ResidualBlock(x, filters=64, kernel_size=(3, 3), weight_decay=weight_decay, downsample=True)
+    for i in range(block_layers_num-1):
+        x = ResidualBlock(x, filters=64, kernel_size=(3, 3), weight_decay=weight_decay, downsample=False)
+    x = AveragePooling2D(pool_size=(8, 8), padding='valid')(x)
+    x = Flatten()(x)
+    x = Dense(classes, activation='softmax')(x)
+    model = Model(input, x, name='ResNet18')
+    return model
+
+
+def ResNet20ForCIFAR10(classes, input_shape, weight_decay):
+    return ResNetForCIFAR10(classes, input_shape, 3, weight_decay)
+
+
+def ResNet32ForCIFAR10(classes, input_shape, weight_decay):
+    return ResNetForCIFAR10(classes, input_shape, 5, weight_decay)
+
+
+def ResNet56ForCIFAR10(classes, input_shape, weight_decay):
+    return ResNetForCIFAR10(classes, input_shape, 9, weight_decay)

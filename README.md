@@ -24,3 +24,6 @@ environment.
  vgg | 92.32% 
  inceptionV1 | 93.08% 
  ResNet18 | 93.47%
+ small-ResNet20 | 91.45%
+ small-ResNet32 | 92.16%
+ small-ResNet56 | 
