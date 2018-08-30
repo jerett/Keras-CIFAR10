@@ -19,7 +19,7 @@ environment.
  Model | Notebook | Accuracy
  :---: | :---: | :---: 
  SVM | [svm](svm.ipynb) | 33.36% | 
- Softmax | [softmax](svm.ipynb)  | 33.11% |
+ Softmax | [softmax](softmax.ipynb)  | 33.11% |
  simple_cnn | [simple_cnn](simple_cnn.ipynb) | 66.75%
  vgg | [vgg](vgg.ipynb)  | 92.32% 
  inceptionV1 | [GoogLeNet](GoogLeNet.ipynb)  | 93.08% 
