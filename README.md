@@ -16,14 +16,14 @@ The dataset is divided into 40000 train images, 10000 validation images, and 100
 All result is tested on 10000 test images.You can view and run in the jupyter
 environment.
 
- Model | Accuracy
- :---: | :---: 
- SVM | 33.36% | 
- Softmax | 33.11% |
- simple_cnn     | 66.75%
- vgg | 92.32% 
- inceptionV1 | 93.08% 
- ResNet18 | 93.47%
- small-ResNet20 | 91.45%
- small-ResNet32 | 92.16%
- small-ResNet56 | 
+ Model | Notebook | Accuracy
+ :---: | :---: | :---: 
+ SVM | [svm](svm.ipynb) | 33.36% | 
+ Softmax | [softmax](svm.ipynb)  | 33.11% |
+ simple_cnn | [simple_cnn](simple_cnn.ipynb) | 66.75%
+ vgg | [vgg](vgg.ipynb)  | 92.32% 
+ inceptionV1 | [GoogLeNet](GoogLeNet.ipynb)  | 93.08% 
+ ResNet18 | [resnet18](resnet18.ipynb)  | 93.47%
+ small-ResNet20 | [small_resnet20](small_resnet20.ipynb) | 91.25%
+ small-ResNet32 | [small_resnet32](small_resnet32.ipynb) | 92.34%
+ small-ResNet56 | [small_resnet56](small_resnet56.ipynb) | 92.37%

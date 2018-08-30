@@ -7,3 +7,4 @@ insta360/__pycache__/insta360.cpython-35.pyc
 __pycache__/
 .env/
 .ipynb_checkpoints/
+nohup.out
